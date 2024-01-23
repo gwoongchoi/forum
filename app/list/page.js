@@ -7,14 +7,12 @@ export default async function List() {
 
   return (
     <div className="list-bg">
-      {result.map((a, i) => {
-        return (
-          <div className="list-item" key={i}>
-            <h4>{result[i].title}</h4>
-            <p>{result[i].content}</p>
-          </div>
-        );
-      })}
+      {result.map((a, i) => (
+        <div className="list-item" key={i}>
+          <h4>{result[i].title}</h4>
+          <p>{result[i].content}</p>
+        </div>
+      ))}
     </div>
   );
 }
