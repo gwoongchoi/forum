@@ -1,6 +1,6 @@
 import { connectDB } from "@/util/database";
 import Link from "next/link";
-import DetailLink from "./DetailLink";
+// import DetailLink from "./DetailLink";
 
 export default async function List() {
   const db = (await connectDB).db("forum");
@@ -16,6 +16,7 @@ export default async function List() {
           >
             <h4>{result[i].title}</h4>
           </Link>
+          <Link href={"/edit"}>✏️</Link>
           {/* <DetailLink /> */}
           <p>{result[i].content}</p>
         </div>
