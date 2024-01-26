@@ -10,13 +10,12 @@ export default async function List() {
     <div className="list-bg">
       {result.map((a, i) => (
         <div className="list-item" key={i}>
-          <Link
-            prefetch={false}
-            href={`/detail/${result[i]._id.toHexString()}`}
-          >
+          <Link prefetch={false} href={`/detail/${result[i]._id}`}>
             <h4>{result[i].title}</h4>
           </Link>
-          <Link href={"/edit"}>✏️</Link>
+          <Link prefetch={false} href={`/edit/${result[i]._id}`}>
+            ✏️
+          </Link>
           {/* <DetailLink /> */}
           <p>{result[i].content}</p>
         </div>
